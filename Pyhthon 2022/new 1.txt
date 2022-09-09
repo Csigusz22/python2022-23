@@ -1,0 +1,2 @@
+print("Hello Csigusz",end="\n-----------------------\n")
+print("Hello Csigusz","Helló világ!",42)

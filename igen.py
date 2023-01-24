@@ -33,24 +33,72 @@ def beolvas():
         kerdesek.append(sor.replace("\n","").split(" "))
 
     f.close()
+    
 def kerdez():
+    #jó válasz
     valasztott=random.choice(kerdesek)
-    print("valasztott", valasztott)
+    #print("valasztott", valasztott)
+    #rossz válaszok, 3db
     rossz=[]
     for i in range(3):
+        #temp="alma"
         temp=random.choice(kerdesek)
-        print(temp)
-        while temp not in rossz and temp!=valasztott:
-            rossz.append(temp)
-        print(rossz)
+        #print("temp"temp)
+       
+        while not(temp not in rossz and temp!=valasztott):
+            temp=random.choice(kerdesek)
+
+        rossz.append(temp)
+        #print("rossz"rossz)
 
     print("-"*40)
-    print("Mit jelenet ez a szó? "+ valasztott[0])
+    print("Mit jelenet:"+ valasztott[0]+"?")
 
     rossz.append(valasztott)
     print(rossz)
+    
+    #válasz bekérés
+    abc="abcdefghijklmnopqrstuxyvwz"
+    random.shuffle(rossz)
 
-beolvas()
-kerdez()
-#szavak=sokBeker()
-#filebaIr(szavak)
+    i=0
+    for e in rossz:
+        print(abc[i]+": "+e[1])
+        i+=1
+
+    valasz=input("válasz: ")
+    hol=abc.index(valasz)
+    print(hol)
+    while hol<4:
+        try:
+        valasz=input("Válasz újra: ")
+       hol=abc.index(valasz)
+       except (e):
+           pass
+
+       
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+                     
+
+
+        

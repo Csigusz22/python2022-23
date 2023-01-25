@@ -55,7 +55,6 @@ def kerdez():
     print("Mit jelenet:"+ valasztott[0]+"?")
 
     rossz.append(valasztott)
-    print(rossz)
     
     #válasz bekérés
     abc="abcdefghijklmnopqrstuxyvwz"
@@ -65,18 +64,29 @@ def kerdez():
     for e in rossz:
         print(abc[i]+": "+e[1])
         i+=1
+     valasz=input("Válasz: ")    
 
-    valasz=input("válasz: ")
-    hol=abc.index(valasz)
-    print(hol)
-    while hol<4:
+    hol=4
+    while hol>=4:
         try:
+            if valasz!="":
+            hol=abc.index(valasz)
+     except:
         valasz=input("Válasz újra: ")
-       hol=abc.index(valasz)
-       except (e):
-           pass
+        else:
+            if hol>=4:
+         valasz=input("Válasz újra: ")
 
-       
+    if valasztott [0]==rosssz[hol][0]:
+        print("helyes :)")
+    else:
+        print("Rossz válasz!")
+
+beolvas()
+kerdez()
+               
+
+           
         
 
 

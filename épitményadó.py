@@ -34,7 +34,22 @@ else:
     for e in tulajdonok:
     print("{} utca {}".format(e[1],e[2]))
 
-hazakA=[efor e in hazak if e[3]=="A"]
-    
+hazakA=[e for e in hazak if e[3]=="A"]
+
+hazakB[]
+fo e in hazak:
+    if e[3]=="B":
+        hazakB.append(e)
+
+hazakC=[e for e in hazak if e[3]=="C"]
+
+adoA=[]
+
+for i in range (len(hazakA)):
+    hazakA[i],append(ado(hazakA[i][3],[4]))
+
+
 
     
+
+
